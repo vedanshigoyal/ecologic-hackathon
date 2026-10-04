@@ -76,3 +76,20 @@ Per hectare per season; reported as mean across seasons plus min, max and standa
 - CO₂ saved (kg/ha) = energy saved × grid emission factor (assumption)
 - Paired per-season comparison: number of seasons in which the scheduler used less water
   than the baseline, and number in which its yield was within 2 % of the baseline yield.
+
+## 6. Observed behaviour worth knowing
+
+- The `fixed_7d` baseline applies exactly 25 mm × 29 events = 725 mm in every simulated season:
+  the model's wheat season (planting to maturity) spans 29 weekly dates in each year of this weather file.
+  This is checked by the test `test_baseline_schedule_is_fixed_depth_interval`.
+- Rainfed wheat already reaches about 98 % of the baseline yield in this sample climate (exact figure in
+  `results/impact.json`, `rainfed_reference`), so the crop is only mildly water-limited here. This is
+  why the saving is large: the baseline over-applies. Results do not transfer to drier climates without
+  re-running with local weather.
+
+## 7. Reproducibility and single source of truth
+
+- `python run_experiment.py` is deterministic (AquaCrop-OSPy has no random components in this setup).
+- `python analyze.py` writes `results/impact.json`, then renders `README.md` and `docs/VIDEO_SCRIPT.md`
+  from the templates in `docs/templates/` (`render_docs.py`). Numbers in those files are never typed by hand.
+- `python build_deck.py` reads the same `impact.json` (and the same formatting functions) for the deck.
