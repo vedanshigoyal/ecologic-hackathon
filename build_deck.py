@@ -113,9 +113,11 @@ def build(v: dict, impact: dict) -> Presentation:
     text(s, MARGIN, Inches(2.75), Inches(11.5), Inches(1.0),
          "Soil-moisture-driven irrigation scheduling for water savings: "
          "a simulation study on AquaCrop-OSPy", size=22, color=PALE)
-    text(s, MARGIN, Inches(4.3), Inches(11.5), Inches(0.5), "[TEAM NAME]   [MEMBERS]", size=20,
+    text(s, MARGIN, Inches(4.1), Inches(11.5), Inches(0.5), f"Team {config.TEAM_NAME}", size=22,
          color=WHITE, bold=True)
-    text(s, MARGIN, Inches(4.85), Inches(11.5), Inches(0.5),
+    text(s, MARGIN, Inches(4.6), Inches(11.5), Inches(0.5), "  ·  ".join(config.TEAM_MEMBERS),
+         size=18, color=WHITE)
+    text(s, MARGIN, Inches(5.25), Inches(11.5), Inches(0.5),
          "EcoLogic 1.0 Sustainability Hackathon  |  Theme: Smart Agriculture", size=16, color=PALE)
     footer(s, dark=True)
     s.notes_slide.notes_text_frame.text = "Introduce the team. Say up front: every result in this deck is simulated."
@@ -255,17 +257,19 @@ def build(v: dict, impact: dict) -> Presentation:
 
 
 def check(path) -> None:
-    """Render check: 7 slides, no empty placeholders, team placeholder only on slide 1."""
+    """Render check: 7 slides, no empty placeholders, team name on slide 1, no leftover team placeholder."""
     prs = Presentation(str(path))
     assert len(prs.slides) == 7, f"expected 7 slides, got {len(prs.slides)}"
     for i, slide in enumerate(prs.slides, start=1):
         for shp in slide.placeholders:
             assert shp.has_text_frame and shp.text_frame.text.strip(), f"empty placeholder on slide {i}"
         texts = " ".join(sh.text_frame.text for sh in slide.shapes if sh.has_text_frame)
-        assert ("[TEAM NAME]" in texts) == (i == 1), f"team placeholder misplaced on slide {i}"
+        assert "[TEAM NAME]" not in texts and "[MEMBERS]" not in texts, f"leftover placeholder on slide {i}"
+        if i == 1:
+            assert config.TEAM_NAME in texts, "team name missing from slide 1"
         assert "simulated" in texts.lower(), f"slide {i} lacks the 'simulated' label"
     print(f"Deck check passed: {len(prs.slides)} slides, no empty placeholders, "
-          "team placeholder only on slide 1, 'simulated' on every slide")
+          "team name on slide 1, 'simulated' on every slide")
 
 
 def main() -> None:

@@ -11,6 +11,9 @@ ROOT = Path(__file__).resolve().parent
 RESULTS_DIR = ROOT / "results"
 DECK_PATH = ROOT / "deck" / "SmartIrrigate_Deck.pptx"
 
+TEAM_NAME = "Codexa"
+TEAM_MEMBERS = ["Vedanshi Goyal", "Apoorva Singh", "Soumyadip Manna", "Pranay Maheshwari"]
+
 # --- Crop / soil / weather (model inputs) -----------------------------------------
 CROP_NAME = "Wheat"
 PLANTING_DATE = "10/01"  # MM/DD, 1 October

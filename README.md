@@ -4,7 +4,7 @@
 
 **Soil-moisture-driven irrigation scheduling for water savings: a simulation study on AquaCrop-OSPy.**
 
-Submission for EcoLogic 1.0 Sustainability Hackathon, theme Smart Agriculture.
+Submission by **Team Codexa** (Vedanshi Goyal, Apoorva Singh, Soumyadip Manna, Pranay Maheshwari) for EcoLogic 1.0 Sustainability Hackathon, theme Smart Agriculture.
 
 > **All results in this repository are SIMULATED** with the FAO AquaCrop crop-water model
 > (Python port AquaCrop-OSPy). They are not field measurements. The weather is the
