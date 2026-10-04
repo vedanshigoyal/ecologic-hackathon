@@ -1,0 +1,53 @@
+{
+  "rule": "Choose the SMT strategy with the lowest mean seasonal irrigation (mm) among those whose mean dry yield is at least 98% of the fixed_7d mean yield. If none qualify, report that plainly and show the best yield-preserving trade-off without claiming it meets the rule.",
+  "rule_met": true,
+  "selected": "smt_40",
+  "note": "Selection rule met.",
+  "baseline": "fixed_7d",
+  "baseline_mean_yield_t_ha": 9.365895652173913,
+  "yield_threshold_t_ha": 9.178577739130434,
+  "candidates": [
+    {
+      "strategy": "smt_40",
+      "mean_irrigation_mm": 26.08695652173913,
+      "mean_yield_t_ha": 9.36344347826087,
+      "yield_pct_of_baseline": 99.9738180521745,
+      "qualifies": true
+    },
+    {
+      "strategy": "smt_50",
+      "mean_irrigation_mm": 36.95652173913044,
+      "mean_yield_t_ha": 9.364,
+      "yield_pct_of_baseline": 99.97976005451788,
+      "qualifies": true
+    },
+    {
+      "strategy": "smt_60",
+      "mean_irrigation_mm": 56.37652173913044,
+      "mean_yield_t_ha": 9.3651,
+      "yield_pct_of_baseline": 99.9915047935247,
+      "qualifies": true
+    },
+    {
+      "strategy": "smt_70",
+      "mean_irrigation_mm": 91.16433478260869,
+      "mean_yield_t_ha": 9.365891304347826,
+      "yield_pct_of_baseline": 99.9999535781067,
+      "qualifies": true
+    },
+    {
+      "strategy": "smt_80",
+      "mean_irrigation_mm": 149.57170869565218,
+      "mean_yield_t_ha": 9.365895652173913,
+      "yield_pct_of_baseline": 100.0,
+      "qualifies": true
+    },
+    {
+      "strategy": "smt_90",
+      "mean_irrigation_mm": 238.43287826086956,
+      "mean_yield_t_ha": 9.365895652173913,
+      "yield_pct_of_baseline": 100.0,
+      "qualifies": true
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "label": "SIMULATED with AquaCrop-OSPy; not field-measured",
+  "setup": {
+    "crop": "Wheat",
+    "soil": "SandyLoam",
+    "weather": "Tunis, Tunisia (AquaCrop-OSPy bundled sample climate)",
+    "sim_start": "1979/10/01",
+    "sim_end": "2002/05/31",
+    "n_seasons": 23,
+    "first_season": "1979-80",
+    "last_season": "2001-02"
+  },
+  "selection": {
+    "selected": "smt_40",
+    "rule_met": true,
+    "note": "Selection rule met.",
+    "rule": "Choose the SMT strategy with the lowest mean seasonal irrigation (mm) among those whose mean dry yield is at least 98% of the fixed_7d mean yield. If none qualify, report that plainly and show the best yield-preserving trade-off without claiming it meets the rule."
+  },
+  "baseline": {
+    "id": "fixed_7d",
+    "irrigation_mm": {
+      "mean": 725.0,
+      "min": 725.0,
+      "max": 725.0,
+      "std": 0.0
+    },
+    "yield_t_ha": {
+      "mean": 9.365895652173911,
+      "min": 8.3096,
+      "max": 10.1813,
+      "std": 0.505781303330223
+    },
+    "water_productivity_kg_m3": 1.291847676161919
+  },
+  "scheduler": {
+    "id": "smt_40",
+    "irrigation_mm": {
+      "mean": 26.08695652173913,
+      "min": 0.0,
+      "max": 100.0,
+      "std": 35.73757004950782
+    },
+    "yield_t_ha": {
+      "mean": 9.363443478260868,
+      "min": 8.3096,
+      "max": 10.1811,
+      "std": 0.5041120734213473
+    },
+    "water_productivity_kg_m3": 35.8932,
+    "seasons_with_zero_irrigation": 13
+  },
+  "rainfed_reference": {
+    "yield_t_ha": 9.224030434782609,
+    "yield_pct_of_baseline": 98.48530004326523
+  },
+  "savings_per_ha_per_season": {
+    "water_mm": {
+      "mean": 698.9130434782609,
+      "min": 625.0,
+      "max": 725.0,
+      "std": 35.73757004950782
+    },
+    "water_litres": {
+      "mean": 6989130.434782608,
+      "min": 6250000.0,
+      "max": 7250000.0,
+      "std": 357375.7004950782
+    },
+    "water_m3": {
+      "mean": 6989.130434782609,
+      "min": 6250.0,
+      "max": 7250.0,
+      "std": 357.37570049507815
+    },
+    "water_pct_of_baseline": 96.40179910044976,
+    "energy_kwh": {
+      "mean": 1269.6920289855072,
+      "min": 1135.4166666666667,
+      "max": 1317.0833333333333,
+      "std": 64.92325225660583
+    },
+    "cost_inr": {
+      "mean": 7618.152173913043,
+      "min": 6812.5,
+      "max": 7902.5,
+      "std": 389.53951353963527
+    },
+    "co2_kg": {
+      "mean": 901.48134057971,
+      "min": 806.1458333333334,
+      "max": 935.1291666666666,
+      "std": 46.095509102190164
+    }
+  },
+  "yield_difference": {
+    "t_ha": {
+      "mean": -0.0024521739130434787,
+      "min": -0.0235000000000003,
+      "max": 0.0030999999999998806,
+      "std": 0.0068176821951332406
+    },
+    "pct_of_baseline": -0.026181947825509803
+  },
+  "paired": {
+    "n_seasons": 23,
+    "seasons_scheduler_used_less_water": 23,
+    "seasons_yield_within_2pct": 23
+  },
+  "assumptions": {
+    "pump_head_m": 30.0,
+    "pump_efficiency": 0.45,
+    "kwh_per_m3": 0.18166666666666667,
+    "tariff_inr_per_kwh": 6.0,
+    "grid_ef_kg_co2_per_kwh": 0.71,
+    "baseline_interval_days": 7,
+    "baseline_depth_mm": 25.0
+  },
+  "sensitivity_head": [
+    {
+      "head_m": 15.0,
+      "kwh_per_m3": 0.09083333333333334,
+      "kwh_saved": 634.8460144927536,
+      "inr_saved": 3809.076086956522,
+      "kg_co2_saved": 450.7406702898551
+    },
+    {
+      "head_m": 30.0,
+      "kwh_per_m3": 0.18166666666666667,
+      "kwh_saved": 1269.6920289855072,
+      "inr_saved": 7618.152173913044,
+      "kg_co2_saved": 901.4813405797101
+    },
+    {
+      "head_m": 60.0,
+      "kwh_per_m3": 0.36333333333333334,
+      "kwh_saved": 2539.3840579710145,
+      "inr_saved": 15236.304347826088,
+      "kg_co2_saved": 1802.9626811594203
+    }
+  ],
+  "per_season": [
+    {
+      "season": "1979-80",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.9401,
+      "scheduler_yield_t_ha": 8.9401
+    },
+    {
+      "season": "1980-81",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.3096,
+      "scheduler_yield_t_ha": 8.3096
+    },
+    {
+      "season": "1981-82",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 9.1368,
+      "scheduler_yield_t_ha": 9.1361
+    },
+    {
+      "season": "1982-83",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.8116,
+      "scheduler_yield_t_ha": 8.8116
+    },
+    {
+      "season": "1983-84",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.6827,
+      "scheduler_yield_t_ha": 8.6827
+    },
+    {
+      "season": "1984-85",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.9251,
+      "scheduler_yield_t_ha": 8.9251
+    },
+    {
+      "season": "1985-86",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 25.0,
+      "water_saved_litres": 7000000.0,
+      "baseline_yield_t_ha": 9.1917,
+      "scheduler_yield_t_ha": 9.1916
+    },
+    {
+      "season": "1986-87",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.8509,
+      "scheduler_yield_t_ha": 8.8509
+    },
+    {
+      "season": "1987-88",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 100.0,
+      "water_saved_litres": 6250000.0,
+      "baseline_yield_t_ha": 9.4465,
+      "scheduler_yield_t_ha": 9.423
+    },
+    {
+      "season": "1988-89",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 75.0,
+      "water_saved_litres": 6500000.0,
+      "baseline_yield_t_ha": 9.2686,
+      "scheduler_yield_t_ha": 9.2695
+    },
+    {
+      "season": "1989-90",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 25.0,
+      "water_saved_litres": 7000000.0,
+      "baseline_yield_t_ha": 9.7612,
+      "scheduler_yield_t_ha": 9.7612
+    },
+    {
+      "season": "1990-91",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 9.2424,
+      "scheduler_yield_t_ha": 9.2413
+    },
+    {
+      "season": "1991-92",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 9.1002,
+      "scheduler_yield_t_ha": 9.1002
+    },
+    {
+      "season": "1992-93",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 8.9673,
+      "scheduler_yield_t_ha": 8.9673
+    },
+    {
+      "season": "1993-94",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 75.0,
+      "water_saved_litres": 6500000.0,
+      "baseline_yield_t_ha": 9.7693,
+      "scheduler_yield_t_ha": 9.7677
+    },
+    {
+      "season": "1994-95",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 50.0,
+      "water_saved_litres": 6750000.0,
+      "baseline_yield_t_ha": 9.624,
+      "scheduler_yield_t_ha": 9.6185
+    },
+    {
+      "season": "1995-96",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 9.8113,
+      "scheduler_yield_t_ha": 9.8113
+    },
+    {
+      "season": "1996-97",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 75.0,
+      "water_saved_litres": 6500000.0,
+      "baseline_yield_t_ha": 10.0146,
+      "scheduler_yield_t_ha": 9.9912
+    },
+    {
+      "season": "1997-98",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 9.9835,
+      "scheduler_yield_t_ha": 9.9835
+    },
+    {
+      "season": "1998-99",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 0.0,
+      "water_saved_litres": 7250000.0,
+      "baseline_yield_t_ha": 9.5086,
+      "scheduler_yield_t_ha": 9.5083
+    },
+    {
+      "season": "1999-00",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 50.0,
+      "water_saved_litres": 6750000.0,
+      "baseline_yield_t_ha": 9.8618,
+      "scheduler_yield_t_ha": 9.8578
+    },
+    {
+      "season": "2000-01",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 25.0,
+      "water_saved_litres": 7000000.0,
+      "baseline_yield_t_ha": 10.1813,
+      "scheduler_yield_t_ha": 10.1811
+    },
+    {
+      "season": "2001-02",
+      "baseline_mm": 725.0,
+      "scheduler_mm": 100.0,
+      "water_saved_litres": 6250000.0,
+      "baseline_yield_t_ha": 10.0265,
+      "scheduler_yield_t_ha": 10.0296
+    }
+  ],
+  "strategies": [
+    {
+      "id": "rainfed",
+      "mean_irrigation_mm": 0.0,
+      "mean_yield_t_ha": 9.224030434782609
+    },
+    {
+      "id": "fixed_7d",
+      "mean_irrigation_mm": 725.0,
+      "mean_yield_t_ha": 9.365895652173913
+    },
+    {
+      "id": "smt_40",
+      "mean_irrigation_mm": 26.08695652173913,
+      "mean_yield_t_ha": 9.36344347826087
+    },
+    {
+      "id": "smt_50",
+      "mean_irrigation_mm": 36.95652173913044,
+      "mean_yield_t_ha": 9.364
+    },
+    {
+      "id": "smt_60",
+      "mean_irrigation_mm": 56.37652173913044,
+      "mean_yield_t_ha": 9.3651
+    },
+    {
+      "id": "smt_70",
+      "mean_irrigation_mm": 91.16433478260869,
+      "mean_yield_t_ha": 9.365891304347826
+    },
+    {
+      "id": "smt_80",
+      "mean_irrigation_mm": 149.57170869565218,
+      "mean_yield_t_ha": 9.365895652173913
+    },
+    {
+      "id": "smt_90",
+      "mean_irrigation_mm": 238.43287826086956,
+      "mean_yield_t_ha": 9.365895652173913
+    }
+  ]
+}
