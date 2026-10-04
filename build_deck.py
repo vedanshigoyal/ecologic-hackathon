@@ -119,6 +119,7 @@ def build(v: dict, impact: dict) -> Presentation:
          size=18, color=WHITE)
     text(s, MARGIN, Inches(5.25), Inches(11.5), Inches(0.5),
          "EcoLogic 1.0 Sustainability Hackathon  |  Theme: Smart Agriculture", size=16, color=PALE)
+    text(s, MARGIN, Inches(5.7), Inches(11.5), Inches(0.5), f"Code: {config.REPO_URL}", size=16, color=WHITE)
     footer(s, dark=True)
     s.notes_slide.notes_text_frame.text = "Introduce the team. Say up front: every result in this deck is simulated."
 

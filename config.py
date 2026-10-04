@@ -12,6 +12,7 @@ RESULTS_DIR = ROOT / "results"
 DECK_PATH = ROOT / "deck" / "SmartIrrigate_Deck.pptx"
 
 TEAM_NAME = "Codexa"
+REPO_URL = "https://github.com/vedanshigoyal/ecologic-hackathon"
 TEAM_MEMBERS = ["Vedanshi Goyal", "Apoorva Singh", "Soumyadip Manna", "Pranay Maheshwari"]
 
 # --- Crop / soil / weather (model inputs) -----------------------------------------
