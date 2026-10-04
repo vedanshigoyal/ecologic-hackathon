@@ -104,7 +104,7 @@ Energy, cost and CO₂ use assumed values: pump head 30 m, pump efficiency 0.45
 
 ## How to run
 
-Python 3.10 to 3.12 (developed on 3.12.4).
+Tested on Python 3.12.4 (Windows). Python 3.10 and 3.11 were not tested.
 
 ```bash
 pip install -r requirements.txt
